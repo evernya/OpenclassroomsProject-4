@@ -1,0 +1,60 @@
+//Texte
+
+@mixin h1{
+    font-family: $fontFamilyText;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+    color: $colorText;
+
+    @media screen and (min-width: 61.25em){
+        font-size: 2.5rem;
+        }
+}
+
+@mixin h2{
+    font-family: $fontFamilyTitle;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: normal;
+    color: $colorText;
+}
+
+@mixin h3{
+    font-family: $fontFamilyText;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;
+    color: $colorText;
+}
+
+@mixin h4{
+    font-family: $fontFamilyText;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: normal;
+    color: #353535;
+}
+
+@mixin h5{
+    font-family: $fontFamilyText;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: normal;
+    color: $colorText;
+}
+
+@mixin h6{
+    font-family: $fontFamilyText;
+    font-size: 1rem;
+    font-weight: 500; 
+    color: $colorText;
+}
+
+@mixin body{
+    font-family: $fontFamilyText;
+    font-size: 1.0625rem;
+    font-weight: 300; 
+    line-height: normal;
+    color: $colorText;
+}
