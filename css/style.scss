@@ -6,10 +6,7 @@
 @import "layout/header";
 
 @import "pages/index";
-@import "pages/menu_delice";
-@import "pages/menu_francais";
-@import "pages/menu_note";
-@import "pages/menu_palette";
+@import "pages/menu";
 
 
 /*@media screen and (min-width: 61.25em){}*/
@@ -24,4 +21,5 @@ h3{@include h3}
 h4{@include h4}
 h5{@include h5}
 h6{@include h6}
+h7{@include h7}
 p{@include body}

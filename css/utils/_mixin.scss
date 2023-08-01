@@ -47,7 +47,16 @@
 @mixin h6{
     font-family: $fontFamilyText;
     font-size: 1rem;
-    font-weight: 500; 
+    font-weight: 500;
+    line-height: normal;
+    color: $colorText;
+}
+
+@mixin h7{
+    font-family: $fontFamilyText;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: normal;
     color: $colorText;
 }
 
@@ -56,5 +65,5 @@
     font-size: 1.0625rem;
     font-weight: 300; 
     line-height: normal;
-    color: $colorText;
+    color: $colorText; 
 }
