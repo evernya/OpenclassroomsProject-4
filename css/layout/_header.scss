@@ -1,0 +1,33 @@
+// HEADER //
+// Logo
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.nav img{height: 3vh;}
+
+.fa-arrow-left{
+    font-size: 1.25rem;
+}
+
+// Location
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 3rem;
+    background-color: #EAEAEA;
+}
+
+input{
+    @include h6;
+    border: none;
+    background-color: transparent;
+}
