@@ -64,24 +64,29 @@
     color: $colorTextLight;
 }
 
-.fa-mobile-screen-button, .fa-list-ul{
+.fa-mobile-screen-button,
+.fa-list-ul {
     color: #7E7E7E;
 }
 
-.fa-store{
+.fa-store {
     color: $colorPrimary;
 }
 
 // restaurants
-.restaurants{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.restaurants {
     padding: 3rem 1rem;
     background-color: $colorBackMain;
 }
 
-a{
+.restaurants-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+a {
     text-decoration: none;
 }
 
@@ -90,11 +95,11 @@ a{
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-radius: 20px; 
+    border-radius: 20px;
     background-color: white;
 }
 
-.card-information .card-new{
+.card-information .card-new {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -105,36 +110,58 @@ a{
     width: 5rem;
     height: 1.8rem;
 }
-   
-.card-information .card-new p{
+
+.card-information .card-new p {
     color: $colorTextButton;
-    font-weight: 500; 
+    font-weight: 500;
 }
 
 .card-information img {
     object-fit: cover;
-    height: 14rem; 
+    height: 14rem;
     border-radius: 20px 20px 0 0;
 }
 
-.card-information .card-content{
+.card-information .card-content {
     display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-padding: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
 }
 
-.card-information .card-title{
+.card-information .card-title {
     padding-bottom: 10px;
 }
 
-.card-information .card-like .fa-heart{
+.card-information .card-like .fa-heart {
     font-size: 2rem;
 }
 
 
-@media screen and (min-width: 61.25em){
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media screen and (min-width: 1024px) {
+        // restaurants
+        .restaurants {
+            padding: 3rem 11rem;
+        }
+    
+        .restaurants-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    
+        .card {
+            width: 34rem;
+            height: 19rem;
+        }
+}
+
+@media screen and (min-width: 61.25em) {
+
     // fonctionnement
     .fonctionnement {
         padding: 3rem 11rem;
@@ -142,5 +169,21 @@ padding: 15px;
 
     .fonctionnement-container {
         flex-direction: row;
+    }
+
+    // restaurants
+    .restaurants {
+        padding: 3rem 11rem;
+    }
+
+    .restaurants-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 34rem;
+        height: 19rem;
     }
 }
