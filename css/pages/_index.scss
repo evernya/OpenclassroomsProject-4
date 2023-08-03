@@ -86,17 +86,11 @@
     margin-top: 2rem;
 }
 
-a {
-    text-decoration: none;
-}
-
-.card {
+.card-information {
     position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-radius: 20px;
-    background-color: white;
 }
 
 .card-information .card-new {
