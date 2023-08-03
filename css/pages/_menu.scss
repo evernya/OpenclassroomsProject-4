@@ -1,0 +1,73 @@
+// MENU PALETTE + NOTE + DELICE + FRANCAIS //
+// main
+
+.background-image-palette {
+    background-image: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 17rem;
+}
+
+// section
+
+.main-information {
+    width: 100%;
+    background-color: #b4a7de;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 3rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.menu-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.menu-subtitle h6 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.line-menu-subtitle {
+    width: 2.5rem;
+    height: 0.1875rem;
+    background-color: $colorTertiary;
+    margin: 5px 0;
+}
+
+.entree-container,
+.plats-container,
+.desserts-container {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.card-menu {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 21rem;
+    height: auto;
+}
+
+.card-menu-price span {
+    color: $colorBackFooter;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.menu-btn {
+    display: flex;
+    justify-content: center;
+}

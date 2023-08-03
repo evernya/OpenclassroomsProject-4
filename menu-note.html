@@ -12,23 +12,26 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="nav">
+            <div class="nav-btn-return"><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
             <img src="./images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
         </div>
     </header>
-
+    
     <main>
         <div class="background-image-note"></div>
 
-        <section>
-            <div class="title">
+        <div class="main-information">
+            <div class="menu-title">
                 <h2>La note enchantée</h2>
                 <i class="fa-regular fa-heart" aria-hidden="true"></i>
             </div>
 
             <div class="entree-container">
-                <h6>Entrées</h6>
+                <div class="menu-subtitle">
+                    <h6>Entrées</h6>
+                    <div class="line-menu-subtitle"></div>
+                </div>
 
                 <article class="card card-menu">
                     <div class="card-menu-text">
@@ -72,7 +75,10 @@
             </div>
  
             <div class="plats-container">
-                <h6>Plats</h6>
+                <div class="menu-subtitle">
+                    <h6>Plats</h6>
+                    <div class="line-menu-subtitle"></div>
+                </div>
 
                 <article class="card card-menu">
                     <div class="card-menu-text">
@@ -106,7 +112,10 @@
             </div>
 
             <div class="desserts-container">
-                <h6>Desserts</h6>
+                <div class="menu-subtitle">
+                    <h6>Desserts</h6>
+                    <div class="line-menu-subtitle"></div>
+                </div>
 
                 <article class="card card-menu">
                     <div class="card-menu-text">
@@ -139,8 +148,8 @@
                 </article>
             </div>
 
-            <button>Commander</button>
-        </section>
+            <div class="menu-btn"><button class="btn">Commander</button></div>
+        </div>
     </main>
 
     <footer>

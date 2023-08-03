@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - La palette du goût</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="nav">
+            <div class="nav-btn-return"><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
             <img src="./images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
         </div>
     </header>
@@ -21,14 +23,17 @@
     <main>
         <div class="background-image-palette"></div>
 
-        <section>
-            <div class="title">
+        <div class="main-information">
+            <div class="menu-title">
                 <h2>La palette du goût</h2>
                 <i class="fa-regular fa-heart" aria-hidden="true"></i>
             </div>
 
             <div class="entree-container">
-                <h6>Entrées</h6>
+                <div class="menu-subtitle">
+                    <h6>Entrées</h6>
+                    <div class="line-menu-subtitle"></div>
+                </div>
 
                 <article class="card card-menu">
                     <div class="card-menu-text">
@@ -60,9 +65,12 @@
                     </div>
                 </article>
             </div>
- 
+
             <div class="plats-container">
-                <h6>Plats</h6>
+                <div class="menu-subtitle">
+                    <h6>Plats</h6>
+                    <div class="line-menu-subtitle"></div>
+                </div>
 
                 <article class="card card-menu">
                     <div class="card-menu-text">
@@ -96,7 +104,10 @@
             </div>
 
             <div class="desserts-container">
-                <h6>Desserts</h6>
+                <div class="menu-subtitle">
+                    <h6>Desserts</h6>
+                    <div class="line-menu-subtitle"></div>
+                </div>
 
                 <article class="card card-menu">
                     <div class="card-menu-text">
@@ -129,8 +140,9 @@
                 </article>
             </div>
 
-            <button>Commander</button>
-        </section>
+            <div class="menu-btn"><button class="btn">Commander</button></div>
+            
+        </div>
     </main>
 
     <footer>
@@ -147,4 +159,5 @@
         </div>
     </footer>
 </body>
+
 </html>
