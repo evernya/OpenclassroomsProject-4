@@ -24,3 +24,12 @@ h5{@include h5}
 h6{@include h6}
 h7{@include h7}
 p{@include body}
+
+a {
+    text-decoration: none;
+}
+
+.card{
+    border-radius: 20px;
+    background-color: white;
+}
