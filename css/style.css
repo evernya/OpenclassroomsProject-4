@@ -307,6 +307,7 @@ input {
   flex-direction: column;
   gap: 3rem;
   align-items: center;
+  position: relative;
   margin-top: -30px;
 }
 
@@ -361,7 +362,7 @@ input {
 
 /****** Media queries ***********/
 @media screen and (min-width: 768px) {
-  main section {
+  .menu-container {
     display: flex;
     justify-content: center;
   }
