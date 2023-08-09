@@ -1,0 +1,37 @@
+.card-like .fa-heart {
+    font-size: 2rem;
+}
+
+.title-like .fa-heart{
+    font-size: 1.5rem;
+}
+
+
+input[type='checkbox'] {
+    display: none;
+}
+
+input[type='checkbox']+label {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+
+input[type='checkbox']+label>ins {
+    position: absolute;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+input[type='checkbox']+label>ins>#active {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    color: transparent;
+}
+
+input[type='checkbox']:checked+label>ins {
+    height: 100%;
+}

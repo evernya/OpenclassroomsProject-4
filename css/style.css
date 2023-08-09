@@ -18,6 +18,44 @@
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
+.card-like .fa-heart {
+  font-size: 2rem;
+}
+
+.title-like .fa-heart {
+  font-size: 1.5rem;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+input[type=checkbox] + label > ins {
+  position: absolute;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+input[type=checkbox] + label > ins > #active {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+input[type=checkbox]:checked + label > ins {
+  height: 100%;
+}
+
 footer {
   width: 100%;
   padding: 1.4rem 1.5rem;
@@ -116,7 +154,7 @@ footer img {
   background-color: #EAEAEA;
 }
 
-input {
+#location-name {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -248,10 +286,6 @@ input {
 
 .card-information .card-title {
   padding-bottom: 10px;
-}
-
-.card-information .card-like .fa-heart {
-  font-size: 2rem;
 }
 
 /****** Media queries ***********/
