@@ -39,13 +39,13 @@ input[type=checkbox] + label {
 input[type=checkbox] + label > ins {
   position: absolute;
   display: block;
-  width: 100%;
   overflow: hidden;
+  width: 100%;
+  transform: translateY(100%);
 }
 
-input[type=checkbox] + label > ins > #active {
+input[type=checkbox] + label > ins > #fa-heart-full {
   position: absolute;
-  bottom: 0;
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
@@ -54,9 +54,13 @@ input[type=checkbox] + label > ins > #active {
 
 input[type=checkbox]:checked + label > ins {
   height: 100%;
-  transition: all 5s;
+  transform: translateY(0%);
+  transition: transform 1s ease-in-out;
 }
 
+/*input[type='checkbox']:checked + label > ins > #fa-heart-full {
+
+}*/
 .card-menu-container {
   padding: 1rem;
   display: flex;
