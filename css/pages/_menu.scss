@@ -53,11 +53,13 @@
 
 .card-menu {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
-    padding: 1rem;
     width: 21rem;
-    height: auto;
+    height: 5rem;
+}
+
+.card-menu-text{
+    width: 65%;
 }
 
 .card-menu-price span {
@@ -91,4 +93,6 @@
     .card-menu {
         width: 40rem;
     }
+
+    
 }

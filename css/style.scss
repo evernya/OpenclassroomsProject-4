@@ -3,6 +3,7 @@
 @import "utils/mixin";
 @import "components/button";
 @import "components/checkout";
+@import "components/focus";
 @import "layout/footer";
 @import "layout/header";
 
@@ -33,5 +34,5 @@ a {
 
 .card{
     border-radius: 20px;
-    background-color: white;
+    background-color: rgb(240, 64, 64);
 }

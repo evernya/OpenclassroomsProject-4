@@ -1,3 +1,6 @@
+//CHECKOUT //
+
+// animation coeur
 .card-like .fa-heart {
     font-size: 2rem;
 }
@@ -34,4 +37,5 @@ input[type='checkbox']+label>ins>#active {
 
 input[type='checkbox']:checked+label>ins {
     height: 100%;
+    transition: all 5s;
 }

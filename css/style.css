@@ -54,6 +54,35 @@ input[type=checkbox] + label > ins > #active {
 
 input[type=checkbox]:checked + label > ins {
   height: 100%;
+  transition: all 5s;
+}
+
+.card-menu-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 10rem;
+  width: 100%;
+}
+.card-menu-container:hover + .card-selection {
+  background-color: #99E2D0;
+  transform: translate(0%);
+}
+
+.card-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 4rem;
+  transform: translate(100%);
+  transition: transform 1s, background-color 1s;
+}
+
+.fa-circle-check {
+  color: white;
 }
 
 footer {
@@ -374,11 +403,13 @@ footer img {
 
 .card-menu {
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
-  padding: 1rem;
   width: 21rem;
-  height: auto;
+  height: 5rem;
+}
+
+.card-menu-text {
+  width: 65%;
 }
 
 .card-menu-price span {
@@ -489,5 +520,5 @@ a {
 
 .card {
   border-radius: 20px;
-  background-color: white;
+  background-color: rgb(240, 64, 64);
 }/*# sourceMappingURL=style.css.map */
