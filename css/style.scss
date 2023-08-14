@@ -4,6 +4,7 @@
 @import "components/button";
 @import "components/checkout";
 @import "components/focus";
+@import "components/loader";
 @import "layout/footer";
 @import "layout/header";
 
@@ -15,6 +16,7 @@
 
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
     margin: 0;
 }
 

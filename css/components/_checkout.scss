@@ -9,7 +9,6 @@
     font-size: 1.5rem;
 }
 
-
 input[type='checkbox'] {
     display: none;
 }
@@ -18,6 +17,7 @@ input[type='checkbox'] + label {
     position: relative;
     display: flex;
     cursor: pointer;
+    overflow: hidden;
 }
 
 input[type='checkbox'] + label > ins {
@@ -28,8 +28,9 @@ input[type='checkbox'] + label > ins {
     transform: translateY(100%);
 }
 
+//
 
-input[type='checkbox'] + label > ins > #fa-heart-full {
+input[type='checkbox'] + label > ins > .fa-heart-full {
     position: absolute;
     background: linear-gradient(#FF79DA, #9356DC);
     background-clip: text;
@@ -39,9 +40,21 @@ input[type='checkbox'] + label > ins > #fa-heart-full {
 input[type='checkbox']:checked + label > ins {
     height: 100%;
     transform: translateY(-0%);
-    transition: transform 1s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
-/*input[type='checkbox']:checked + label > ins > #fa-heart-full {
+//active
+input[type='checkbox'] + label > .fa-heart-select {
+    position: relative;
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    color: transparent;
+}
 
-}*/
+input[type='checkbox'] + label > ins > .fa-heart-deselect {
+    position: absolute;
+}
+
+input[type='checkbox']:checked + label > .fa-heart-select {
+    background: transparent;
+}
