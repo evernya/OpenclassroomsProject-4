@@ -2,7 +2,7 @@
 @import "utils/variables";
 @import "utils/mixin";
 @import "components/button";
-@import "components/checkout";
+@import "components/checkbox";
 @import "components/focus";
 @import "components/loader";
 @import "layout/footer";
@@ -36,5 +36,5 @@ a {
 
 .card{
     border-radius: 20px;
-    background-color: rgb(240, 64, 64);
+    background-color: #fff;
 }
