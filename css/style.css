@@ -33,8 +33,8 @@ input[type=checkbox] {
 input[type=checkbox] + #label-like-check {
   position: relative;
   display: flex;
-  cursor: pointer;
   overflow: hidden;
+  cursor: pointer;
 }
 
 input[type=checkbox] + #label-like-check > #ins-like-check {
@@ -82,171 +82,55 @@ input[type=checkbox] {
 input[type=checkbox] + #label-menu-check {
   position: relative;
   display: flex;
-  cursor: pointer;
-  overflow: hidden;
-  width: 100%;
   align-items: center;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 input[type=checkbox] + #label-menu-check > #ins-menu-check {
   position: absolute;
   display: block;
-  width: 100%;
-  margin-left: 82%;
+  left: 100%;
+}
+input[type=checkbox] + #label-menu-check > #ins-menu-check:hover {
+  animation: slidein 0.5s 1;
+  animation-fill-mode: both;
 }
 
 input[type=checkbox] + #label-menu-check > #ins-menu-check > .fa-circle-check {
   position: absolute;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  width: 4rem;
-  height: 100%;
-  background-color: #99E2D0;
-}
-
-input[type=checkbox]:checked + #label-menu-check > #ins-menu-check {
-  height: 100%;
-  animation: glissement 0.5s 1 alternate;
-}
-
-input[type=checkbox]:checked + #label-menu-check > #ins-menu-check > .fa-circle-check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-input[type=checkbox]:checked + #label-menu-check > .card-menu-container {
-  width: 82%;
-  animation: slidein 0.5s 1 alternate;
-}
-
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-  }
-  to {
-    margin-left: 82%;
-  }
-}
-@keyframes slidein {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 82%;
-  }
-}
-/****** Media queries ***********/
-@media screen and (min-width: 768px) {
-  input[type=checkbox] + #label-menu-check > #ins-menu-check {
-    margin-left: 90%;
-  }
-  input[type=checkbox]:checked + #label-menu-check > .card-menu-container {
-    width: 90%;
-    animation: slidein 0.5s 1 alternate;
-  }
-  @keyframes glissement {
-    from {
-      margin-left: 100%;
-    }
-    to {
-      margin-left: 90%;
-    }
-  }
-  @keyframes slidein {
-    from {
-      width: 100%;
-    }
-    to {
-      width: 90%;
-    }
-  }
-}
-input[type=checkbox] {
   display: none;
 }
 
-input[type=checkbox] + #label-menu-check {
-  position: relative;
-  display: flex;
-  cursor: pointer;
-  overflow: hidden;
-  width: 100%;
-  align-items: center;
-}
-
-input[type=checkbox] + #label-menu-check > #ins-menu-check {
-  position: absolute;
-  display: block;
-  width: 100%;
-  margin-left: 82%;
-}
-
-input[type=checkbox] + #label-menu-check > #ins-menu-check > .fa-circle-check {
-  position: absolute;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  width: 4rem;
-  height: 100%;
-  background-color: #99E2D0;
-}
-
 input[type=checkbox]:checked + #label-menu-check > #ins-menu-check {
   height: 100%;
-  animation: glissement 0.5s 1 alternate;
+  left: 90%;
 }
 
 input[type=checkbox]:checked + #label-menu-check > #ins-menu-check > .fa-circle-check {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+  width: 4rem;
+  height: 100%;
 }
 
 input[type=checkbox]:checked + #label-menu-check > .card-menu-container {
   width: 82%;
-  animation: slidein 0.5s 1 alternate;
+  animation: slidein 0.5s 1;
+  animation-fill-mode: both;
 }
 
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-  }
-  to {
-    margin-left: 82%;
-  }
-}
 @keyframes slidein {
   from {
     width: 100%;
   }
   to {
     width: 82%;
-  }
-}
-/****** Media queries ***********/
-@media screen and (min-width: 768px) {
-  input[type=checkbox] + #label-menu-check > #ins-menu-check {
-    margin-left: 90%;
-  }
-  input[type=checkbox]:checked + #label-menu-check > .card-menu-container {
-    width: 90%;
-    animation: slidein 0.5s 1 alternate;
-  }
-  @keyframes glissement {
-    from {
-      margin-left: 100%;
-    }
-    to {
-      margin-left: 90%;
-    }
-  }
-  @keyframes slidein {
-    from {
-      width: 100%;
-    }
-    to {
-      width: 90%;
-    }
   }
 }
 #loader {
