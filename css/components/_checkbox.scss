@@ -4,7 +4,21 @@ input[type='checkbox'] {
     display: none;
 }
 
-// checkbox like
+input[type='checkbox'] + label {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+input[type='checkbox'] + label > ins {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+//Checkbox like
 .card-like .fa-heart {
     font-size: 2rem;
 }
@@ -13,74 +27,99 @@ input[type='checkbox'] {
     font-size: 1.5rem;
 }
 
-input[type='checkbox']+#label-like-check {
-    position: relative;
-    display: flex;
+
+input[type='checkbox'] + #label-like-check > #ins-like-check {
     overflow: hidden;
-    cursor: pointer;
 }
 
-input[type='checkbox']+#label-like-check>#ins-like-check {
+input[type='checkbox'] + #label-like-check > #ins-like-check > .fa-heart-full {
     position: absolute;
-    display: block;
-    overflow: hidden;
-    width: 100%;
-    transform: translateY(100%);
 }
 
 //
 
-input[type='checkbox']+#label-like-check>#ins-like-check>.fa-heart-full {
-    position: absolute;
-    background: linear-gradient(#FF79DA, #9356DC);
-    background-clip: text;
-    color: transparent;
+input[type='checkbox']:checked + #label-like-check > #ins-like-check > .fa-heart-full{
+    @include checkbox-like;
+    animation: checkbox-like-check 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
-input[type='checkbox']:checked+#label-like-check>#ins-like-check {
-    height: 100%;
-    transform: translateY(-0%);
-    transition: transform 0.5s ease-in-out;
+input[type='checkbox']:not(:checked) + #label-like-check > #ins-like-check > .fa-heart-full{
+    @include checkbox-like;
+    animation: checkbox-like-uncheck 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
+
+input[type='checkbox']:checked + #label-like-check > #ins-like-check > #fa-heart-active{
+    @include checkbox-like;
+    animation: checkbox-like-active-check 300ms cubic-bezier(.4, .0, .23, 1) forwards;
+}
+
+input[type='checkbox']:not(:checked) + #label-like-check > #ins-like-check > #fa-heart-active{
+    @include checkbox-like;
+    animation: checkbox-like-active-uncheck 300ms cubic-bezier(.4, .0, .23, 1) forwards;
+}
+
+@keyframes checkbox-like-check {
+    0%{
+        transform: translate3d(0,100%,0);
+      }
+      100%{        
+        transform: translate3d(0,0,0);
+      }
+    }
+
+@keyframes checkbox-like-uncheck {
+    0%{
+        transform: translate3d(0,0,0);
+      }
+      100%{        
+        transform: translate3d(0,100%,0);
+      }
+    }
+
+    @keyframes checkbox-like-active-check {
+        0%{
+            transform: translate3d(0,0,0);
+          }
+          100%{        
+            transform: translate3d(0,100%,0);
+          }
+        }
+    
+    @keyframes checkbox-like-active-uncheck {
+        0%{
+            transform: translate3d(0,100%,0);
+          }
+          100%{        
+            transform: translate3d(0,0,0);
+          }
+        }
 
 //active
 
-input[type='checkbox']+#label-like-check>.fa-heart-select {
-    position: relative;
-    background: linear-gradient(#FF79DA, #9356DC);
-    background-clip: text;
-    color: transparent;
-}
+// input[type='checkbox'] + #label-like-check > .fa-heart-select {
+//     position: relative;
+//     background: linear-gradient(#FF79DA, #9356DC);
+//     background-clip: text;
+//     color: transparent;
+// }
 
-input[type='checkbox']+#label-like-check>#ins-like-check>.fa-heart-deselect {
-    position: absolute;
-}
+// input[type='checkbox']+#label-like-check > #ins-like-check > .fa-heart-deselect {
+//     position: absolute;
+// }
 
-input[type='checkbox']:checked+#label-like-check>.fa-heart-select {
-    background: transparent;
-}
+// input[type='checkbox']:checked+#label-like-check>.fa-heart-select {
+//     background: transparent;
+// }
 
 
 //Checkbox menu
 
-input[type='checkbox'] {
-    display: none;
-}
-
 input[type='checkbox'] + #label-menu-check {
-    position: relative;
-    display: flex;
     align-items: center;
     width: 100%;
-    overflow: hidden;
-    cursor: pointer;
 }
 
 input[type='checkbox'] + #label-menu-check > #ins-menu-check {
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
     left: 83%;
 }
 
@@ -91,14 +130,14 @@ input[type='checkbox'] + #label-menu-check > #ins-menu-check > .fa-circle-check 
 
 
 
-input[type='checkbox']:checked + #label-menu-check > #ins-menu-check >.fa-circle-check {
+input[type='checkbox']:checked + #label-menu-check > #ins-menu-check > .fa-circle-check {
     @include checkbox-menu;
-    animation: checkbox-check 300ms cubic-bezier(.4, .0, .23, 1) forwards;
+    animation: checkbox-menu-check 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
 input[type='checkbox']:not(:checked) + #label-menu-check > #ins-menu-check > .fa-circle-check {
     @include checkbox-menu;
-    animation: checkbox-uncheck 300ms cubic-bezier(.4, .0, .23, 1) forwards;
+    animation: checkbox-menu-uncheck 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
 
@@ -113,7 +152,7 @@ input[type='checkbox']:not(:checked) + #label-menu-check > .card-menu-container 
 }
 
 
-@keyframes checkbox-check {
+@keyframes checkbox-menu-check {
     0%{
         transform: translate3d(100%,0,0);
       }
@@ -122,7 +161,7 @@ input[type='checkbox']:not(:checked) + #label-menu-check > .card-menu-container 
       }
     }
 
-@keyframes checkbox-uncheck {
+@keyframes checkbox-menu-uncheck {
     0%{
         transform: translate3d(0,0,0);
       }
