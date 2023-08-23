@@ -69,6 +69,12 @@
 }
 
 //Checkbox menu
+@mixin checkbox-like{
+    background: linear-gradient(#FF79DA, #9356DC);
+    background-clip: text;
+    color: transparent;
+}
+
 @mixin checkbox-menu{
     display: flex;
     justify-content: center;
