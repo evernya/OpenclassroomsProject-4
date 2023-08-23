@@ -1,0 +1,28 @@
+// appearing
+
+.entree-container, .plats-container, .desserts-container{
+    animation: appearing 5s;
+}
+
+.entree-container{
+    animation-delay: 0s;
+}
+
+.plats-container{
+    animation-delay: .5s;
+}
+
+.desserts-container{
+    animation-delay: .10s;
+}
+
+
+@keyframes appearing{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
