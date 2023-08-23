@@ -67,3 +67,15 @@
     line-height: normal;
     color: $colorText; 
 }
+
+//Checkbox menu
+@mixin checkbox-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: $colorTertiary;
+    width: 4rem;
+    height: 100%;
+}
