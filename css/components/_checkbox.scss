@@ -9,18 +9,18 @@ input[type='checkbox'] {
     font-size: 2rem;
 }
 
-.title-like .fa-heart{
+.title-like .fa-heart {
     font-size: 1.5rem;
 }
 
-input[type='checkbox'] + #label-like-check {
+input[type='checkbox']+#label-like-check {
     position: relative;
     display: flex;
     overflow: hidden;
     cursor: pointer;
 }
 
-input[type='checkbox'] + #label-like-check > #ins-like-check {
+input[type='checkbox']+#label-like-check>#ins-like-check {
     position: absolute;
     display: block;
     overflow: hidden;
@@ -30,14 +30,14 @@ input[type='checkbox'] + #label-like-check > #ins-like-check {
 
 //
 
-input[type='checkbox'] + #label-like-check > #ins-like-check > .fa-heart-full {
+input[type='checkbox']+#label-like-check>#ins-like-check>.fa-heart-full {
     position: absolute;
     background: linear-gradient(#FF79DA, #9356DC);
     background-clip: text;
     color: transparent;
 }
 
-input[type='checkbox']:checked + #label-like-check > #ins-like-check {
+input[type='checkbox']:checked+#label-like-check>#ins-like-check {
     height: 100%;
     transform: translateY(-0%);
     transition: transform 0.5s ease-in-out;
@@ -45,18 +45,18 @@ input[type='checkbox']:checked + #label-like-check > #ins-like-check {
 
 //active
 
-input[type='checkbox'] +#label-like-check > .fa-heart-select {
+input[type='checkbox']+#label-like-check>.fa-heart-select {
     position: relative;
     background: linear-gradient(#FF79DA, #9356DC);
     background-clip: text;
     color: transparent;
 }
 
-input[type='checkbox'] + #label-like-check > #ins-like-check > .fa-heart-deselect {
+input[type='checkbox']+#label-like-check>#ins-like-check>.fa-heart-deselect {
     position: absolute;
 }
 
-input[type='checkbox']:checked + #label-like-check > .fa-heart-select {
+input[type='checkbox']:checked+#label-like-check>.fa-heart-select {
     background: transparent;
 }
 
@@ -79,13 +79,9 @@ input[type='checkbox'] + #label-menu-check {
 input[type='checkbox'] + #label-menu-check > #ins-menu-check {
     position: absolute;
     display: block;
-    left: 100%;
-    // transition: left 300ms cubic-bezier(.4,.0,.23,1);
-    
-    &:hover{
-        animation: slidein 0.5s 1;
-        animation-fill-mode: both;
-    }
+    height: 100%;
+    width: 100%;
+    left: 83%;
 }
 
 input[type='checkbox'] + #label-menu-check > #ins-menu-check > .fa-circle-check {
@@ -95,141 +91,75 @@ input[type='checkbox'] + #label-menu-check > #ins-menu-check > .fa-circle-check 
 
 
 
-input[type='checkbox']:checked + #label-menu-check > #ins-menu-check {
-    height: 100%;
-    left: 90%;
+input[type='checkbox']:checked + #label-menu-check > #ins-menu-check >.fa-circle-check {
+    @include checkbox-menu;
+    animation: checkbox-check 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
-input[type='checkbox']:checked + #label-menu-check > #ins-menu-check > .fa-circle-check {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: $colorTertiary;
-    width: 4rem;
-    height: 100%;
+input[type='checkbox']:not(:checked) + #label-menu-check > #ins-menu-check > .fa-circle-check {
+    @include checkbox-menu;
+    animation: checkbox-uncheck 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
+
 
 input[type='checkbox']:checked + #label-menu-check > .card-menu-container {
     width: 82%;
-    animation: slidein 0.5s 1;
-    animation-fill-mode: both;
+    animation: slidein 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
+input[type='checkbox']:not(:checked) + #label-menu-check > .card-menu-container {
+    width: 82%;
+    animation: slideout 300ms cubic-bezier(.4, .0, .23, 1) forwards;
+}
+
+
+@keyframes checkbox-check {
+    0%{
+        transform: translate3d(100%,0,0);
+      }
+      100%{        
+        transform: translate3d(0,0,0);
+      }
+    }
+
+@keyframes checkbox-uncheck {
+    0%{
+        transform: translate3d(0,0,0);
+      }
+      100%{        
+        transform: translate3d(100%,0,0);
+      }
+    }
+
+
 @keyframes slidein {
-    from {
+    0% {
         width: 100%;
-      }
-    
-      to {
+    }
+
+    100% {
         width: 82%;
-      }
-  }
+    }
+}
+
+@keyframes slideout {
+    0% {
+        width: 82%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
 
 
-// input[type='checkbox'] {
-//     display: none;
-// }
+  /****** Media queries ***********/
 
-// input[type='checkbox'] + #label-menu-check {
-//     position: relative;
-//     display: flex;
-//     cursor: pointer;
-//     overflow: hidden;
-//     width: 100%;
-//     align-items: center;
-// }
+@media screen and (min-width: 768px) {
 
-// input[type='checkbox'] + #label-menu-check > #ins-menu-check {
-//     position: absolute;
-//     display: block;
-//     width: 100%;
-//     margin-left: 82%;
-//     animation: glissement2 0.5s 1;
-// }
+    //Checkbox menu
+    input[type='checkbox'] + #label-menu-check > #ins-menu-check {
+        left: 90%;
+    }
 
-// input[type='checkbox'] + #label-menu-check > #ins-menu-check > .fa-circle-check {
-//     position: absolute;
-//     display: none;
-//     border-top-right-radius: 20px;
-//     border-bottom-right-radius: 20px;
-//     width: 4rem;
-//     height: 100%;
-//     background-color: $colorTertiary;
-// }
-
-// input[type='checkbox']:checked + #label-menu-check > #ins-menu-check {
-//     height: 100%;
-//     animation: glissement 0.5s 1;
-//     animation-fill-mode: both;
-// }
-
-// input[type='checkbox']:checked + #label-menu-check > #ins-menu-check > .fa-circle-check {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-// input[type='checkbox']:checked + #label-menu-check > .card-menu-container {
-//     width: 82%;
-//     animation: slidein 0.5s 1;
-//     animation-fill-mode: both;
-// }
-
-// @keyframes glissement {
-//     from {
-//       margin-left: 100%;
-//     }
-  
-//     to {
-//       margin-left: 82%;
-//     }
-//   }
-
-//   @keyframes slidein {
-//     from {
-//         width: 100%;
-//       }
-    
-//       to {
-//         width: 82%;
-//       }
-//   }
-
-
-//   /****** Media queries ***********/
-
-// @media screen and (min-width: 768px) {
-    
-//     //Checkbox menu
-//     input[type='checkbox'] + #label-menu-check > #ins-menu-check {
-//         margin-left: 90%;
-//     }
-
-//     input[type='checkbox']:checked + #label-menu-check > .card-menu-container {
-//         width: 90%;
-//         animation: slidein 0.5s 1 alternate;
-//     }
-
-//     @keyframes glissement {
-//         from {
-//           margin-left: 100%;
-//         }
-      
-//         to {
-//           margin-left: 90%;
-//         }
-//       }
-
-    
-//       @keyframes slidein {
-//         from {
-//             width: 100%;
-//           }
-        
-//           to {
-//             width: 90%;
-//           }
-//       }
-//     }
+}
