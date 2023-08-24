@@ -526,13 +526,10 @@ footer img {
 
 /****** Media queries ***********/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .restaurants {
-    padding: 3rem 11rem;
-  }
   .restaurants-container {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   .card {
     width: 34rem;
