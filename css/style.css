@@ -71,15 +71,15 @@ input[type=checkbox] + label > ins {
   font-size: 1.5rem;
 }
 
-input[type=checkbox] + #label-like-check > #ins-like-check {
+input[type=checkbox] + .label-like-check > .ins-like-check {
   overflow: hidden;
 }
 
-input[type=checkbox] + #label-like-check > #ins-like-check > .fa-heart-full {
+input[type=checkbox] + .label-like-check > .ins-like-check > .fa-heart-full {
   position: absolute;
 }
 
-input[type=checkbox]:checked + #label-like-check > #ins-like-check > .fa-heart-full {
+input[type=checkbox]:checked + .label-like-check > .ins-like-check > .fa-heart-full {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
@@ -87,7 +87,7 @@ input[type=checkbox]:checked + #label-like-check > #ins-like-check > .fa-heart-f
   animation: checkbox-like-check 300ms cubic-bezier(0.4, 0, 0.23, 1) forwards;
 }
 
-input[type=checkbox]:not(:checked) + #label-like-check > #ins-like-check > .fa-heart-full {
+input[type=checkbox]:not(:checked) + .label-like-check > .ins-like-check > .fa-heart-full {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
@@ -95,7 +95,7 @@ input[type=checkbox]:not(:checked) + #label-like-check > #ins-like-check > .fa-h
   animation: checkbox-like-uncheck 300ms cubic-bezier(0.4, 0, 0.23, 1) forwards;
 }
 
-input[type=checkbox]:checked + #label-like-check > #ins-like-check > #fa-heart-active {
+input[type=checkbox]:checked + .label-like-check > .ins-like-check > #fa-heart-active {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
@@ -103,7 +103,7 @@ input[type=checkbox]:checked + #label-like-check > #ins-like-check > #fa-heart-a
   animation: checkbox-like-active-check 300ms cubic-bezier(0.4, 0, 0.23, 1) forwards;
 }
 
-input[type=checkbox]:not(:checked) + #label-like-check > #ins-like-check > #fa-heart-active {
+input[type=checkbox]:not(:checked) + .label-like-check > .ins-like-check > #fa-heart-active {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
@@ -143,21 +143,21 @@ input[type=checkbox]:not(:checked) + #label-like-check > #ins-like-check > #fa-h
     transform: translate3d(0, 0, 0);
   }
 }
-input[type=checkbox] + #label-menu-check {
+input[type=checkbox] + .label-menu-check {
   align-items: center;
   width: 100%;
 }
 
-input[type=checkbox] + #label-menu-check > #ins-menu-check {
+input[type=checkbox] + .label-menu-check > .ins-menu-check {
   left: 83%;
 }
 
-input[type=checkbox] + #label-menu-check > #ins-menu-check > .fa-circle-check {
+input[type=checkbox] + .label-menu-check > .ins-menu-check > .fa-circle-check {
   position: absolute;
   display: none;
 }
 
-input[type=checkbox]:checked + #label-menu-check > #ins-menu-check > .fa-circle-check {
+input[type=checkbox]:checked + .label-menu-check > .ins-menu-check > .fa-circle-check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,7 +170,7 @@ input[type=checkbox]:checked + #label-menu-check > #ins-menu-check > .fa-circle-
   animation: checkbox-menu-check 300ms cubic-bezier(0.4, 0, 0.23, 1) forwards;
 }
 
-input[type=checkbox]:not(:checked) + #label-menu-check > #ins-menu-check > .fa-circle-check {
+input[type=checkbox]:not(:checked) + .label-menu-check > .ins-menu-check > .fa-circle-check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,12 +183,12 @@ input[type=checkbox]:not(:checked) + #label-menu-check > #ins-menu-check > .fa-c
   animation: checkbox-menu-uncheck 300ms cubic-bezier(0.4, 0, 0.23, 1) forwards;
 }
 
-input[type=checkbox]:checked + #label-menu-check > .card-menu-container {
+input[type=checkbox]:checked + .label-menu-check > .card-menu-container {
   width: 82%;
   animation: slidein 300ms cubic-bezier(0.4, 0, 0.23, 1) forwards;
 }
 
-input[type=checkbox]:not(:checked) + #label-menu-check > .card-menu-container {
+input[type=checkbox]:not(:checked) + .label-menu-check > .card-menu-container {
   width: 82%;
   animation: slideout 300ms cubic-bezier(0.4, 0, 0.23, 1) forwards;
 }
@@ -227,7 +227,7 @@ input[type=checkbox]:not(:checked) + #label-menu-check > .card-menu-container {
 }
 /****** Media queries ***********/
 @media screen and (min-width: 768px) {
-  input[type=checkbox] + #label-menu-check > #ins-menu-check {
+  input[type=checkbox] + .label-menu-check > .ins-menu-check {
     left: 90%;
   }
 }
@@ -509,6 +509,7 @@ footer img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 14rem;
+  width: 100%;
   border-radius: 20px 20px 0 0;
 }
 
