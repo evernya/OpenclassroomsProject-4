@@ -79,6 +79,10 @@
     white-space: nowrap;
 }
 
+.h7{@include titre-card-menu; display: flex;}
+
+.p{@include body}
+
 .card-menu-price span {
     color: $colorBackFooter;
     font-family: Roboto;

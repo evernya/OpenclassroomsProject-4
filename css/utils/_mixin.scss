@@ -52,20 +52,20 @@
     color: $colorText;
 }
 
-@mixin h7{
-    font-family: $fontFamilyText;
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: normal;
-    color: $colorText;
-}
-
 @mixin body{
     font-family: $fontFamilyText;
     font-size: 1.0625rem;
     font-weight: 300; 
     line-height: normal;
     color: $colorText; 
+}
+
+@mixin titre-card-menu{
+    font-family: $fontFamilyText;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: normal;
+    color: $colorText;
 }
 
 //Checkbox menu
