@@ -28,32 +28,32 @@ input[type='checkbox'] + label > ins {
 }
 
 
-input[type='checkbox'] + #label-like-check > #ins-like-check {
+input[type='checkbox'] + .label-like-check > .ins-like-check {
     overflow: hidden;
 }
 
-input[type='checkbox'] + #label-like-check > #ins-like-check > .fa-heart-full {
+input[type='checkbox'] + .label-like-check > .ins-like-check > .fa-heart-full {
     position: absolute;
 }
 
 //
 
-input[type='checkbox']:checked + #label-like-check > #ins-like-check > .fa-heart-full{
+input[type='checkbox']:checked + .label-like-check > .ins-like-check > .fa-heart-full{
     @include checkbox-like;
     animation: checkbox-like-check 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
-input[type='checkbox']:not(:checked) + #label-like-check > #ins-like-check > .fa-heart-full{
+input[type='checkbox']:not(:checked) + .label-like-check > .ins-like-check > .fa-heart-full{
     @include checkbox-like;
     animation: checkbox-like-uncheck 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
-input[type='checkbox']:checked + #label-like-check > #ins-like-check > #fa-heart-active{
+input[type='checkbox']:checked + .label-like-check > .ins-like-check > #fa-heart-active{
     @include checkbox-like;
     animation: checkbox-like-active-check 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
-input[type='checkbox']:not(:checked) + #label-like-check > #ins-like-check > #fa-heart-active{
+input[type='checkbox']:not(:checked) + .label-like-check > .ins-like-check > #fa-heart-active{
     @include checkbox-like;
     animation: checkbox-like-active-uncheck 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
@@ -94,59 +94,42 @@ input[type='checkbox']:not(:checked) + #label-like-check > #ins-like-check > #fa
           }
         }
 
-//active
-
-// input[type='checkbox'] + #label-like-check > .fa-heart-select {
-//     position: relative;
-//     background: linear-gradient(#FF79DA, #9356DC);
-//     background-clip: text;
-//     color: transparent;
-// }
-
-// input[type='checkbox']+#label-like-check > #ins-like-check > .fa-heart-deselect {
-//     position: absolute;
-// }
-
-// input[type='checkbox']:checked+#label-like-check>.fa-heart-select {
-//     background: transparent;
-// }
-
 
 //Checkbox menu
 
-input[type='checkbox'] + #label-menu-check {
+input[type='checkbox'] + .label-menu-check {
     align-items: center;
     width: 100%;
 }
 
-input[type='checkbox'] + #label-menu-check > #ins-menu-check {
+input[type='checkbox'] + .label-menu-check > .ins-menu-check {
     left: 83%;
 }
 
-input[type='checkbox'] + #label-menu-check > #ins-menu-check > .fa-circle-check {
+input[type='checkbox'] + .label-menu-check > .ins-menu-check > .fa-circle-check {
     position: absolute;
     display: none;
 }
 
 
 
-input[type='checkbox']:checked + #label-menu-check > #ins-menu-check > .fa-circle-check {
+input[type='checkbox']:checked + .label-menu-check > .ins-menu-check > .fa-circle-check {
     @include checkbox-menu;
     animation: checkbox-menu-check 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
-input[type='checkbox']:not(:checked) + #label-menu-check > #ins-menu-check > .fa-circle-check {
+input[type='checkbox']:not(:checked) + .label-menu-check > .ins-menu-check > .fa-circle-check {
     @include checkbox-menu;
     animation: checkbox-menu-uncheck 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
 
-input[type='checkbox']:checked + #label-menu-check > .card-menu-container {
+input[type='checkbox']:checked + .label-menu-check > .card-menu-container {
     width: 82%;
     animation: slidein 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
 
-input[type='checkbox']:not(:checked) + #label-menu-check > .card-menu-container {
+input[type='checkbox']:not(:checked) + .label-menu-check > .card-menu-container {
     width: 82%;
     animation: slideout 300ms cubic-bezier(.4, .0, .23, 1) forwards;
 }
@@ -197,7 +180,7 @@ input[type='checkbox']:not(:checked) + #label-menu-check > .card-menu-container 
 @media screen and (min-width: 768px) {
 
     //Checkbox menu
-    input[type='checkbox'] + #label-menu-check > #ins-menu-check {
+    input[type='checkbox'] +.label-menu-check > .ins-menu-check {
         left: 90%;
     }
 
