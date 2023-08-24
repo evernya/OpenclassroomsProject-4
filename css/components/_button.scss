@@ -1,6 +1,9 @@
 // BUTTON //
 
 .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 3.125rem;
     width: 14rem;
     background: $colorButton;
